@@ -1,0 +1,29 @@
+.container-people{
+    margin-top: 50px;
+    background-color: rgb(15, 15, 15);
+}
+.content-people{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.picture{
+    width: 300px;
+    height: auto;
+}
+.name-people{
+    color: white;
+    margin-bottom: 0;
+}
+.born{
+    color: rgb(167, 167, 167);
+    font-size: 1rem;
+    font-style: italic;
+}
+.container-bio{
+    color: white;
+    width: 80%;
+}
+.container-acting{
+    width: 100%;
+}

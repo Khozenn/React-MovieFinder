@@ -1,0 +1,45 @@
+.container-films{
+    background-color: rgb(15, 15, 15);
+    min-height: calc(100vh - 50px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+}
+.container-content-films{
+    width: 100%;
+}
+.content-films{
+    display: flex;
+}
+.search{
+    width: 30%;
+    margin: 40px 0;
+    border-radius: 10px;
+    height: 35px;
+    font-size: 20px;
+}
+.container-category-films{
+    padding-bottom: 50px;
+}
+.title-category{
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding: 15px 20px;
+    color: white;
+}
+.container-miniature-films{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px 20px;
+    padding: 0px 2px;
+    justify-content: space-around;
+}
+.container-research{
+    display: flex;
+}
+.content-research{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}

@@ -1,0 +1,121 @@
+
+.container-film{
+    background-color: rgb(15, 15, 15);
+}
+.container-details{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.poster-movie{
+    width: 200px;
+    height: auto;
+    border: 2px solid black;
+    border-radius: 10px;
+    z-index: 100;
+
+    margin-top: 300px;
+}
+
+.bg-header{
+    display:flex ;
+    align-items: center;
+    width: 100%;
+    height: 450px;
+    background-color: rgb(15, 15, 15);
+    background-size: cover;
+
+    position: absolute;
+    z-index: 20;
+}
+.movie-title{
+    color: white;
+    font-weight: bold;
+    font-size: 1.8rem;
+    margin-bottom: 0px;
+}
+.movie-date{
+    color: rgb(167, 167, 167);
+    font-size: 1rem;
+    font-style: italic;
+
+}
+.container-category-film{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 20%;
+}
+.text-category{
+    color: white;
+    border: 1px solid white;
+    margin-top: 0;
+    padding: 5px 10px;
+    border-radius: 15px;
+}
+.container-overview-cast{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+}
+.container-overview{
+    width: 40%;
+}
+.movie-overview{
+    color: white;
+    
+}
+.movie-tagline{
+    color: rgb(167, 167, 167);
+    font-size: 1rem;
+    font-style: italic;
+    text-align: right;
+}
+.container-cast{
+    width: 50%;
+}
+.cast-title{
+    color: white;
+    text-align: center;
+}
+.container-actors{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.container-actor{
+    display: flex;
+    flex-basis: 33%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.picture-actor{
+    width: 30%;
+
+}
+.name-actor{
+    color: white;
+}
+.container-video{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+
+}
+.video{
+    width: 768px;
+    height: 432px;
+    margin-bottom: 25px;
+}
+.container-similar{
+    padding: 40px 0;
+}
+.title-similar {
+    color: white;
+    text-align: center;
+}
