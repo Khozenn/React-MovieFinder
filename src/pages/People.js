@@ -13,22 +13,24 @@ const People = () => {
   const [movies, setMovies] = useState([]);
   const [tv, setTv] = useState([]);
 
+  const apiKey = process.env.REACT_APP_API_KEY
+
   useEffect(() => {
     axios
       .get(
-        `https://api.themoviedb.org/3/person/${id}?api_key=70b615d6c1721910135b6883c89ee447&language=en-US`
+        `https://api.themoviedb.org/3/person/${id}?api_key=${apiKey}&language=en-US`
       )
       .then((res) => setDetails(res.data));
 
     axios
       .get(
-        `https://api.themoviedb.org/3/person/${id}/movie_credits?api_key=70b615d6c1721910135b6883c89ee447&language=en-US`
+        `https://api.themoviedb.org/3/person/${id}/movie_credits?api_key=${apiKey}&language=en-US`
       )
       .then((res) => setMovies(res.data.cast.slice(0, 7)));
 
     axios
       .get(
-        `https://api.themoviedb.org/3/person/${id}/tv_credits?api_key=70b615d6c1721910135b6883c89ee447&language=en-US`
+        `https://api.themoviedb.org/3/person/${id}/tv_credits?api_key=${apiKey}&language=en-US`
       )
       .then((res) => setTv(res.data.cast.slice(0, 7)));
   }, []);

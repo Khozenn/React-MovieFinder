@@ -13,28 +13,31 @@ const Item = () => {
   const [video, setVideo] = useState([]);
   const [similar, setSimilar] = useState([]);
 
+  const apiKey = process.env.REACT_APP_API_KEY
+
+
   useEffect(() => {
     axios
       .get(
-        `https://api.themoviedb.org/3/${type}/${id}?api_key=70b615d6c1721910135b6883c89ee447&language=en-US`
+        `https://api.themoviedb.org/3/${type}/${id}?api_key=${apiKey}&language=en-US`
       )
       .then((res) => setDetails(res.data));
 
     axios
       .get(
-        `https://api.themoviedb.org/3/${type}/${id}/credits?api_key=70b615d6c1721910135b6883c89ee447&language=en-US`
+        `https://api.themoviedb.org/3/${type}/${id}/credits?api_key=${apiKey}&language=en-US`
       )
       .then((res) => setCasting(res.data.cast.slice(0, 6)));
 
     axios
       .get(
-        `https://api.themoviedb.org/3/${type}/${id}/videos?api_key=70b615d6c1721910135b6883c89ee447&language=en-US`
+        `https://api.themoviedb.org/3/${type}/${id}/videos?api_key=${apiKey}&language=en-US`
       )
       .then((res) => setVideo(res.data.results.slice(0, 1)));
 
     axios
       .get(
-        `https://api.themoviedb.org/3/${type}/${id}/recommendations?api_key=70b615d6c1721910135b6883c89ee447&language=en-US&page=1`
+        `https://api.themoviedb.org/3/${type}/${id}/recommendations?api_key=${apiKey}&language=en-US&page=1`
       )
       .then((res) => setSimilar(res.data.results.slice(0, 8)));
   }, [id, type]);
@@ -48,11 +51,11 @@ const Item = () => {
             style={
               details.belongs_to_collection
                 ? {
-                    backgroundImage: `url("https://image.tmdb.org/t/p/original/${details.belongs_to_collection.backdrop_path}")`,
-                  }
+                  backgroundImage: `url("https://image.tmdb.org/t/p/original/${details.belongs_to_collection.backdrop_path}")`,
+                }
                 : {
-                    backgroundImage: `url("https://image.tmdb.org/t/p/original/${details.backdrop_path}")`,
-                  }
+                  backgroundImage: `url("https://image.tmdb.org/t/p/original/${details.backdrop_path}")`,
+                }
             }
           ></div>
           <img
